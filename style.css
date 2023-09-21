@@ -10,3 +10,14 @@
     margin: 10px;
     padding: 10px;
 }
+.carousel p{
+    color: #d1a40e;
+    font-size: 50px;
+}
+.carousel h5{
+    color: #d1a40e;
+    font-size: 70px;
+}
+.carousel h6{
+    color: #d1a40e;
+}
