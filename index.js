@@ -6,11 +6,11 @@ class persona{
     }
 }
 const personas=[];
-let parar=prompt("Bienvenidos a 'Tierra y Aire', veamos cuál es tu signo!! (presione enter para continuar//escriba 'no' para salir)");
+let parar=prompt("Bienvenidos a 'Tierra y Aire', veamos cuál es tu signo!! (presione enter para continuar//escriba 'no' para ir a la página)");
 while(parar!="no"){
     personas.push(new persona((prompt("ingrese nombre")), parseInt(prompt ("ingrese dia de nacimiento, ej: '1'")), 
     (prompt ("ingrese mes de nacimiento, ej: '1' o 'Enero'"))));
-    parar=prompt("Desea agregar más personas? (enter para continuar // escriba 'no' para salir)");
+    parar=prompt("Desea agregar más personas? (enter para continuar // escriba 'no' para terminar)");
 }
 
 const nuevo=signo="";
