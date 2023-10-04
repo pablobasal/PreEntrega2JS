@@ -1,83 +1,83 @@
-class persona{
-    constructor(nombre, dia, mes){
-        this.nombre=nombre;
-        this.dia=dia;
-        this.mes=mes;
-    }
-}
-const personas=[];
-let parar=prompt("Bienvenidos a 'Tierra y Aire - astrología ', veamos cuál es tu signo!! (presione enter para continuar//escriba 'no' para ir a la página)");
-while(parar!="no"){
-    personas.push(new persona((prompt("ingrese nombre")), parseInt(prompt ("ingrese dia de nacimiento, ej: '1'")), 
-    (prompt ("ingrese mes de nacimiento, ej: '1' o 'Enero'"))));
-    parar=prompt("Desea agregar más personas? (enter para continuar // escriba 'no' para terminar)");
-}
-
 const nuevo=signo="";
 const nuevo1=compatibilidad="";
+const array=[];
 
-personas.forEach((persona)=>{
-    if((persona.dia>20 && (persona.mes==3 || persona.mes=="Marzo" || 
-    persona.mes=="marzo"))||(persona.dia<20 && (persona.mes==4 || persona.mes=="Abril" || persona.mes=="abril"))){
-    persona.signo="Aries";
-    persona.compatibilidad="Libra";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>19 && (persona.mes==4 || persona.mes=="Abril" || 
-    persona.mes=="abril"))||(persona.dia<21 && (persona.mes==5 || persona.mes=="Mayo" || persona.mes=="mayo"))){
+function agregarObjeto(){
+    const nombre=document.getElementById("formName").value;
+    const dia=document.getElementById("formDay").value;
+    const mes=document.getElementById("formMonth").value;
+    const persona={nombre:nombre, dia:dia, mes:mes};
+    array.push(persona);
+    document.getElementById("formularioo").reset();
+
+    if ((dia>20 && mes==3)||(dia<20 && mes==4)){
+        persona.signo="Aries";
+        persona.compatibilidad="Libra";
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>20 && mes==4)||(dia<21 && mes==5)){
         persona.signo="Tauro";
         persona.compatibilidad="Escorpio";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>20 && (persona.mes==5 || persona.mes=="Mayo" || 
-    persona.mes=="mayo"))||(persona.dia<21 && (persona.mes==6 || persona.mes=="Junio" || persona.mes=="junio"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>20 && mes==5)||(dia<21 && mes==6)){
         persona.signo="Géminis";
         persona.compatibilidad="Sagitario";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>20 && (persona.mes==6 || persona.mes=="Junio" || 
-    persona.mes=="junio"))||(persona.dia<23 && (persona.mes==7 || persona.mes=="Julio" || persona.mes=="julio"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>20 && mes==6)||(dia<23 && mes==7)){
         persona.signo="Cáncer";
         persona.compatibilidad="Capricornio";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>22 && (persona.mes==7 || persona.mes=="Julio" || 
-    persona.mes=="julio"))||(persona.dia<23 && (persona.mes==8 || persona.mes=="Agosto" || persona.mes=="agosto"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>22 && mes==7)||(dia<23 && mes==8)){
         persona.signo="Leo";
-        persona.compatibilidad="Capricornio";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>22 && (persona.mes==8 || persona.mes=="Agosto" || 
-    persona.mes=="agosto"))||(persona.dia<23 && (persona.mes==9 || persona.mes=="Septiembre" || persona.mes=="septiembre"))){
+        persona.compatibilidad="Acuario";
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>22 && mes==8)||(dia<23 && mes==9)){
         persona.signo="Virgo";
         persona.compatibilidad="Piscis";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>22 && (persona.mes==9 || persona.mes=="Septiembre" || 
-    persona.mes=="septiembre"))||(persona.dia<23 && (persona.mes==10 || persona.mes=="Octubre" || persona.mes=="octubre"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>22 && mes==9)||(dia<23 && mes==10)){
         persona.signo="Libra";
         persona.compatibilidad="Aries";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>22 && (persona.mes==10 || persona.mes=="Octubre" || 
-    persona.mes=="octubre"))||(persona.dia<22 && (persona.mes==11 || persona.mes=="Noviembre" || persona.mes=="noviembre"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>22 && mes==10)||(dia<22 && mes==11)){
         persona.signo="Escorpio";
         persona.compatibilidad="Tauro";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>21 && (persona.mes==11 || persona.mes=="Noviembre" || 
-    persona.mes=="noviembre"))||(persona.dia<22 && (persona.mes==12 || persona.mes=="Diciembre" || persona.mes=="diciembre"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>21 && mes==11)||(dia<22 && mes==12)){
         persona.signo="Sagitario";
         persona.compatibilidad="Géminis";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>21 && (persona.mes==12 || persona.mes=="Diciembre" || 
-    persona.mes=="diciembre"))||(persona.dia<20 && (persona.mes==1 || persona.mes=="Enero" || persona.mes=="enero"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>21 && mes==12)||(dia<20 && mes==1)){
         persona.signo="Capricornio";
         persona.compatibilidad="Cáncer";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>19 && (persona.mes==1 || persona.mes=="Enero" || 
-    persona.mes=="enero"))||(persona.dia<19 && (persona.mes==2 || persona.mes=="Febrero" || persona.mes=="febrero"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>19 && mes==1)||(dia<19 && mes==2)){
         persona.signo="Acuario";
         persona.compatibilidad="Leo";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
-    } else if((persona.dia>18 && (persona.mes==2 || persona.mes=="Febrero" || 
-    persona.mes=="febrero"))||(persona.dia<21 && (persona.mes==3 || persona.mes=="Marzo" || persona.mes=="marzo"))){
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
+    }else if ((dia>18 && mes==2)||(dia<21 && mes==3)){
         persona.signo="Piscis";
         persona.compatibilidad="Virgo";
-        console.log(persona.nombre+" tu signo solar es "+persona.signo+", y tu opuesto complementario es "+persona.compatibilidad);
+        const nuevoTitulo=document.getElementById("parrafo");
+        nuevoTitulo.innerText=persona.nombre+" tu signo solar es "+persona.signo+" y tu signo opuesto complementario es "+persona.compatibilidad;
     }
-});
+    const personaJSON=JSON.stringify(array, null, 2);
+    sessionStorage.setItem("objetoGuardado", personaJSON);
+    const traigo=JSON.parse(sessionStorage.getItem("objetoGuardado"));
 
-console.log(personas);
+    const final=document.getElementById("lista");
+    
+    const listItem=document.createElement('li');
+    listItem.textContent="NOMBRE: "+persona.nombre+" - SIGNO SOLAR: "+persona.signo+" - SIGNO OPUESTO: "+persona.compatibilidad+" - DIA DE NACIMIENTO: "+persona.dia+" - MES DE NACIMIENTO: "+persona.mes+".";
+    final.appendChild(listItem);
+}
