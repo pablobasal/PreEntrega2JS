@@ -35,3 +35,6 @@
 .formulario form option{
     background-color: aqua;
 }
+.listas li{
+    list-style-type: circle;
+}
