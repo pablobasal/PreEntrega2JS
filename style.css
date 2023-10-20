@@ -1,5 +1,3 @@
-
-
 .caro img{
     height: 650px;
     object-fit: covcer;
@@ -11,15 +9,15 @@
     padding: 10px;
 }
 .carousel p{
-    color: #d1a40e;
+    color: #4b473e;
     font-size: 50px;
 }
 .carousel h5{
-    color: #d1a40e;
+    color: #242017;
     font-size: 70px;
 }
 .carousel h6{
-    color: #d1a40e;
+    color: #f5cd4c;
 }
 .formulario h2{
     margin: 10px;
@@ -28,13 +26,17 @@
 }
 .formulario{
     border-color: blue;
-    background-color: aqua;
+    background-color: #00011a;
     padding: 15px;
     margin-bottom: 10%;
 }
 .formulario form option{
-    background-color: aqua;
+    background-color: #242017;
 }
 .listas li{
     list-style-type: circle;
+    color: white;
+}
+.form-select option{
+    color: aliceblue;
 }

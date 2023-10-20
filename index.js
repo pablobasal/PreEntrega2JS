@@ -153,3 +153,19 @@ function agregarObjeto(){
     listItem.textContent="NOMBRE: "+persona.nombre+" - SIGNO SOLAR: "+persona.signo+" - SIGNO OPUESTO: "+persona.compatibilidad+" - DIA DE NACIMIENTO: "+persona.dia+" - MES DE NACIMIENTO: "+persona.mes+".";
     final.appendChild(listItem);
 }
+
+const apiKey='GRTOpYR2IF2aX5dCZY8W4PiKVZDEY7vL8aR8qykeICz4hJVAHgv07XLo';
+const url='https://api.pexels.com/v1/search?query=universe&per_pag=1';
+const imagenPexels=document.getElementById('imagen-pexels');
+fetch(url, {
+    method:'GET',
+    headers:{
+        'Authorization': apiKey
+    }
+})
+    .then(response=>response.json())
+    .then(data=>{
+        const imageUrl=data.photos[0].src.large;
+        imagenPexels.src=imageUrl;
+    })
+    .catch(error=>console.error('error:', error));
