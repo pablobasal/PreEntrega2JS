@@ -38,11 +38,12 @@
 
 .tarjetas{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,550px);
-    grid-template-areas: "e1 e2 e3 e4"
-                         "e5 e6 e7 e8"
-                         "e9 e10 e11 e12";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,550px);
+    grid-template-areas: "e1 e2 e3"
+                         "e4 e5 e6"
+                         "e7 e8 e9"
+                         "e10 e11 e12";
 }
 .tarjetas img{
     width: 100px;
