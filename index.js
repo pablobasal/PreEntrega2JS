@@ -1,5 +1,5 @@
-const nuevo=signo="";
-const nuevo1=compatibilidad="";
+const nuevoSigno=signo="";
+const nuevoCompatible=compatibilidad="";
 const array=[];
 
 function agregarObjeto(){
@@ -8,7 +8,7 @@ function agregarObjeto(){
     const mes=document.getElementById("formMonth").value;
     const persona={nombre:nombre, dia:dia, mes:mes};
     array.push(persona);
-    document.getElementById("formularioo").reset();
+    document.getElementById("formulario").reset();
 
     if ((dia>20 && mes==3)||(dia<20 && mes==4)){
         persona.signo="Aries";

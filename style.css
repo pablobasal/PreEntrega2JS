@@ -2,12 +2,6 @@
     height: 650px;
     object-fit: covcer;
 }
-.tarjetas{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-}
 .carousel p{
     color: #4b473e;
     font-size: 50px;
@@ -39,4 +33,67 @@
 }
 .form-select option{
     color: aliceblue;
+}
+
+
+.tarjetas{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,550px);
+    grid-template-areas: "e1 e2 e3 e4"
+                         "e5 e6 e7 e8"
+                         "e9 e10 e11 e12";
+}
+.tarjetas img{
+    width: 100px;
+    height: 100px;
+}
+.cards{
+    margin: 10px 10px 10px 10px;
+}
+.e1{
+    grid-area: e1;
+}
+.e2{
+    grid-area: e2;
+}
+.e3{
+    grid-area: e3;
+}
+.e4{
+    grid-area: e4;
+}
+.e5{
+    grid-area: e5;
+}
+.e6{
+    grid-area: e6;
+}
+.e7{
+    grid-area: e7;
+}
+.e8{
+    grid-area: e8;
+}
+.e9{
+    grid-area: e9;
+}
+.e10{
+    grid-area: e10;
+}
+.e11{
+    grid-area: e11;
+}
+.e12{
+    grid-area: e12;
+}
+.foot h2{
+    color: #00011a;
+    text-align: center;
+}
+.foot h6{
+    text-align: end;
+    color: #4b473e;
+    font-family: sans-serif;
+    margin: 10px;
 }
